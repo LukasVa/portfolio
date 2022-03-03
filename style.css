@@ -4,6 +4,7 @@
   --color-primary-dark: #ba265d;
 
   --color-secondary: #495057;
+  --color-secondary-2: #071c2e;
 
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
@@ -59,7 +60,7 @@ nav {
 }
 h1 {
   text-transform: uppercase;
-  margin-left: 0.5rem;
+  margin-left: 5rem;
   color: #fff;
   font-size: 2.4rem;
   font-weight: 400;
@@ -67,6 +68,7 @@ h1 {
 h2 {
   font-family: Georgia, serif;
   margin-bottom: 0.5rem;
+  font-size: 2.8rem;
 }
 .home-link:link,
 .home-link:visited {
@@ -88,11 +90,12 @@ h2 {
   color: #fff;
   cursor: pointer;
   border-bottom: 3px solid var(--color-secondary);
+
   transition: border-bottom 0.6s;
 }
 .navigation-links__link:hover,
 .navigation-links__link:active {
-  border-bottom: 3px solid #fff;
+  border-bottom: 2.5px solid #fff;
 }
 .contact-link:link,
 .contact-link:visited {
@@ -139,23 +142,81 @@ footer {
   height: 2rem;
   fill: #fff;
 }
-.home-image {
-}
-
+/*HOME PAGE*/
 .home-page {
   background-image: url(images/bkg.JPG);
   object-fit: cover;
   position: relative;
 }
-
+.home-page-intro h2 span,
+.portfolio-heading span {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
 .home-page-intro {
   background-color: rgba(227, 229, 228, 0.85);
   box-shadow: #333;
   position: absolute;
-  width: 50%;
-  top: 40rem;
+  width: 55%;
+  top: 35rem;
   left: 5rem;
   border-radius: 5px;
-  padding: 1.5rem;
+  padding: 3rem 4rem;
   font-size: 1.6rem;
+  box-shadow: 0 3px 6px #888888;
+}
+/*CV PAGE*/
+.cv-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  gap: 20px;
+  align-items: center;
+}
+.cv-image {
+  box-shadow: 0 3px 6px #888888;
+}
+.save-cv:link,
+.save-cv:visited {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-right: 49rem;
+  cursor: pointer;
+}
+.save-cv:hover {
+  color: darkblue;
+}
+/*PORTFOLIO*/
+.portfolio-heading {
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.intro {
+  width: 80%;
+  margin: 5rem auto;
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 1.6rem;
+}
+.secondary {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 5rem;
+}
+.secondary-text {
+  padding: 5rem;
+  font-size: 1.6rem;
+}
+.portfolio-image {
+  width: 80%;
+  border: 0.3px solid #777;
+  margin: 0 auto;
+}
+.portfolio-image--small {
+  width: 60%;
+  border: 0.5px solid #999;
 }
