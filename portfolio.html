@@ -15,6 +15,7 @@
 -->
 
     <title>Lukas Vannini UX Design - Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header>
@@ -24,7 +25,9 @@
         </h1>
         <div class="navigation-links">
           <a href="cv.html" class="navigation-links__link">CV</a>
-          <a href="portfolio.html" class="navigation-links__link">Portfolio</a>
+          <a href="portfolio.html" class="current navigation-links__link"
+            >Portfolio</a
+          >
         </div>
       </nav>
     </header>
@@ -42,20 +45,68 @@
         />
       </section>
       <section class="secondary">
-        <img
-          src="images/second-sdi.png"
-          class="portfolio-image--small"
-          alt="Curriculum vitae page 1"
-        />
-        <div class="secondary-text">Left menu and basic page redesign</div>
+        <div class="secondary__part">
+          <img
+            src="images/second-sdi.png"
+            class="portfolio-image--small"
+            alt="basic page and menu image"
+          />
+        </div>
+        <div class="secondary__part">
+          <img
+            src="images/top-menu-sdi.png"
+            class="portfolio-image--small"
+            alt="new menu proposal"
+          />
+        </div>
       </section>
-      <section class="secondary">
-        <img
-          src="images/top-menu-sdi.png"
-          class="portfolio-image--small"
-          alt="Curriculum vitae page 1"
-        />
-        <div class="secondary-text">Ny hoved menu</div>
+      <section class="process">
+        <h3>Process</h3>
+        <div class="process-part">
+          <h4>Persona</h4>
+          <p>
+            Utvikling av en persona for å tilrettelegge empati med brukere og
+            gjøre klarere hvem man designer for.
+          </p>
+          <img
+            src="images/persona.jpg"
+            class="portfolio-image--small"
+            alt="new menu proposal"
+          />
+        </div>
+        <div class="process-part">
+          <h4>Nåværende nettside og competitive audit</h4>
+          <p>
+            Eksaminert nåværende skole nettside og nettsidene av andre skoler
+            opptatt av privat undervisning.
+          </p>
+        </div>
+        <div class="process-part">
+          <h4>Intervju</h4>
+          <p>
+            Et intervju med administrasjonspersonell for å lære om og forstå
+            utfordringer med kommunikasjon mellom skole og studenter.
+          </p>
+        </div>
+
+        <div class="process-part">
+          <h4>Brukertesting</h4>
+          <p>
+            Brukertest av nåværende skolenes nettside med to studenter for å få
+            innsikt for potensielle forbedringer av nettside.
+          </p>
+        </div>
+        <div class="process-part">
+          <h4>Videre arbeid</h4>
+          <p>
+            Fortsette å brukerteste nåværende side med studenter (3 brukertester
+            til). Siden det er mye innhold på nettsiden og hoved funn av
+            gjennomførte brukertester viser at studenter har det vanskelig å
+            finne informasjon de trenger anser jeg som nyttig å benytte Card
+            sorting metode for å få en bedre forståelse av studentenes mental
+            modell i forbindelse med innhold kategorisering og hierarki.
+          </p>
+        </div>
       </section>
     </main>
 
@@ -100,5 +151,22 @@
         </div>
       </div>
     </footer>
+    <script>
+      $(document).ready(function () {
+        $(".home-link").on("click", function () {
+          $(".navigation-links__link").css(
+            "border-bottom",
+            "2.5px solid #000;"
+          );
+        });
+        $(".navigation-links__link").on("click", function () {
+          $(".navigation-links__link").css(
+            "border-bottom",
+            "2.5px solid #000;"
+          );
+          $(this).css("border-bottom", "2.5px solid #FFF;");
+        });
+      });
+    </script>
   </body>
 </html>

@@ -15,6 +15,7 @@
 -->
 
     <title>Lukas Vannini UX Design - CV</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header>
@@ -23,7 +24,7 @@
           <a class="home-link" href="index.html"> Lukas Vannini UX </a>
         </h1>
         <div class="navigation-links">
-          <a href="cv.html" class="navigation-links__link">CV</a>
+          <a href="cv.html" class="current navigation-links__link">CV</a>
           <a
             href="portfolio.html"
             onclick="current()"
@@ -90,5 +91,10 @@
         </div>
       </div>
     </footer>
+    <script>
+      $(document).ready(function () {
+        $("navigation-links__link").addClass("current");
+      });
+    </script>
   </body>
 </html>
