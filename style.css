@@ -176,7 +176,7 @@ footer {
   box-shadow: #333;
   position: absolute;
   width: 55%;
-  top: 35rem;
+  top: 30rem;
   left: 5rem;
   border-radius: 5px;
   padding: 3rem 4rem;
@@ -256,7 +256,7 @@ footer {
   font-size: 1.6rem;
 }
 
-@media (max-width: 978px) {
+@media (max-width: 1165px) {
   .home-page-intro {
     top: 5rem;
   }
@@ -276,6 +276,9 @@ footer {
   }
 }
 @media (max-width: 536px) {
+  html {
+    font-size: 51%;
+  }
   nav {
     flex-direction: column;
   }
